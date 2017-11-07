@@ -1,6 +1,6 @@
 <?php
 // "HTTP/1.0 404 Not Found"
-function status_header($code = 200) {
+/*function status_header($code = 200) {
 	$messages = [
 		200 => "OK OK",
 		500 => "Server Error"		
@@ -10,8 +10,18 @@ function status_header($code = 200) {
 
 }
 status_header(200);
+*/
 
 // [header => värde]
-function headers(array $headers = []) {}
+// connection: Upgrade;
+function headers(array $headers = []) {
+    foreach ($headers as $header => $value) {
+    	header("$header: $value");		
+    }
+}
 
-function redirect($url, $code = 302) {}
+headers([
+	"Connection" => "Upgrade"
+]);
+
+//function redirect($url, $code = 302) {}
