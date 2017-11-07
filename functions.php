@@ -9,7 +9,7 @@ function status_header($code = 200) {
 
 
 }
-status_header();
+status_header(200);
 
 // [header => värde]
 function headers(array $headers = []) {}
