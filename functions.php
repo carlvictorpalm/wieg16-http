@@ -1,6 +1,6 @@
 <?php
 // "HTTP/1.0 404 Not Found"
-/*function status_header($code = 200) {
+function status_header($code = 200) {
 	$messages = [
 		200 => "OK OK",
 		500 => "Server Error"		
@@ -10,7 +10,7 @@
 
 }
 status_header(200);
-*/
+
 
 // [header => värde]
 // connection: Upgrade;
@@ -21,7 +21,12 @@ function headers(array $headers = []) {
 }
 
 headers([
-	"Connection" => "Upgrade"
+	"Name" => "Victor",
+	"Utbildning" => "Webb",
 ]);
 
-//function redirect($url, $code = 302) {}
+function redirect($url, $code = 302){
+	header("Location: " . $url);
+}
+
+redirect('http://google.se');

@@ -1,4 +1,6 @@
-<?php require('functions.php'); ?>
+<?php
+require('functions.php'); 
+?>
 <html>
 	<body>
 		<form action="form.php" method="post">
